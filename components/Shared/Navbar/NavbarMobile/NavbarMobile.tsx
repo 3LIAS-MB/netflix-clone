@@ -12,7 +12,7 @@ export function NavbarMobile(props: NavbarMobileProps) {
   const { users } = props;
 
   return (
-    <div className="p-4 flex justify-between">
+    <div className="flex justify-between p-4">
       <Logo />
 
       <Sheet>
@@ -25,7 +25,7 @@ export function NavbarMobile(props: NavbarMobileProps) {
               <Link
                 key={item.name}
                 href={item.link}
-                className="hover:textt-gray-300 transition-all duration-300"
+                className="transition-all duration-300 hover:textt-gray-300"
               >
                 {item.name}
               </Link>

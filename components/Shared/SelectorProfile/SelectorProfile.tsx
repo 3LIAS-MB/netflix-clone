@@ -30,7 +30,7 @@ export function SelectorProfile(props: SelectorProfileProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="flex gap-1 items-center">
+        <div className="flex items-center gap-1">
           <Image
             src={
               currentUser ? currentUser.avatarUrl : "/profiles/profile-1.png"
@@ -42,7 +42,7 @@ export function SelectorProfile(props: SelectorProfileProps) {
           <ChevronDown />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 p-2 bg-black/80 border-transparent">
+      <DropdownMenuContent className="w-56 p-2 border-transparent bg-black/80">
         {users.map((user) => (
           <DropdownMenuItem
             key={user.id}
@@ -61,7 +61,7 @@ export function SelectorProfile(props: SelectorProfileProps) {
           </DropdownMenuItem>
         ))}
         <DropdownMenuItem
-          className="flex gap-2 mb-3 group text-white cursor-pointer"
+          className="flex gap-2 mb-3 text-white cursor-pointer group"
           onClick={() => router.push("/profiles")}
         >
           <Pencil className="w-4 h-4" />

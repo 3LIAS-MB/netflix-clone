@@ -33,7 +33,7 @@ export function LoginForm() {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {  
     try {
       login(values).then((data) => {
         setError(data?.error);
@@ -53,7 +53,7 @@ export function LoginForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full gap-4 flex flex-col"
+        className="flex flex-col w-full gap-4"
       >
         <FormField
           control={form.control}
@@ -64,7 +64,7 @@ export function LoginForm() {
                 <Input
                   placeholder="Correo electrónico"
                   {...field}
-                  className="h-14 text-white"
+                  className="text-white h-14"
                 />
               </FormControl>
               <FormMessage />
@@ -81,7 +81,7 @@ export function LoginForm() {
                   placeholder="Contraseña"
                   {...field}
                   type="password"
-                  className="h-14 text-white"
+                  className="text-white h-14"
                 />
               </FormControl>
               <FormMessage />

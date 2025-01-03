@@ -13,11 +13,14 @@ interface UseAddFilmMyList {
 
 export const useLovedFilms = create(
   persist<UseAddFilmMyList>(
+    // 'get' y 'set' se usa dentro de la función de configuración de la tienda (create()),
+    // donde defines cómo se maneja el estado y las acciones. Permite acceder al
+    // estado actual directamente, sin depender de un hook ni del contexto de React.
     (set, get) => ({
       lovedFilmsByUser: {},
 
       addLovedFilm: (data: Movie) => {
-        const { currentUser } = useCurrentNetflixUser.getState(); // Get the current user
+        const { currentUser } = useCurrentNetflixUser.getState();
 
         if (!currentUser) {
           return toast({
@@ -39,7 +42,9 @@ export const useLovedFilms = create(
 
         set({
           lovedFilmsByUser: {
+            // Obtiene el estado actual de lovedFilmsByUser
             ...get().lovedFilmsByUser,
+            // Actualiza el estado de lovedFilmsByUser con la nueva película
             [currentUser.id]: [...currentLovedItems, data],
           },
         });

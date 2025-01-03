@@ -5,12 +5,12 @@ import { TrendingMovies } from "./components/TrendingMovies";
 
 export default function UploadMoviesPage() {
   return (
-    <div className="bg-zinc-900 h-full flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center justify-center h-full bg-zinc-900">
       <Logo />
-      <h1 className="text-2xl my-8 font-semibold">
+      <h1 className="my-8 text-2xl font-semibold">
         Sube tus películas favoritas 🤟🏽
       </h1>
-      <div className="max-w-2xl mx-auto grid grid-cols-2 gap-4">
+      <div className="grid max-w-2xl grid-cols-2 gap-4 mx-auto">
         <NormalMovie />
         <TrendingMovies />
       </div>

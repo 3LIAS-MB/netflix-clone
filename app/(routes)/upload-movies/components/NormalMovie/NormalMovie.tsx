@@ -29,7 +29,7 @@ export function NormalMovie() {
 
   return (
     <div className="border rounded-lg border-white-400 p-6 hover:bg-[#E50914] transition-all duration-300 ">
-      <h1 className="text-xl font-bold mb-4"> Subir películas normales</h1>
+      <h1 className="mb-4 text-xl font-bold"> Subir películas normales</h1>
       <Button
         className="w-full"
         variant={"outline"}

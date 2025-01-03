@@ -10,9 +10,9 @@ export default function RegisterPage() {
 
       <RegisterForm />
 
-      <div className="mt-4 flex gap-1">
+      <div className="flex gap-1 mt-4">
         <p className="text-white opacity-70">¿Ya tienes cuenta?</p>
-        <Link href="/login" className="opacity-1 text-white">
+        <Link href="/login" className="text-white opacity-1">
           Inicia sesión aquí
         </Link>
       </div>
