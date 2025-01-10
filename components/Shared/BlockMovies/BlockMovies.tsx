@@ -7,7 +7,7 @@ export function BlockMovies(props: BlockMoviesProps) {
   if (!movies || movies.length === 0) return null;
 
   return (
-    <div className="-top-16 relative px-[4%] md:pt-20 md:pb-20 overflow-auto bg-[#171717]">
+    <div className="-top-16 relative px-[4%] md:pt-20 md:pb-20 overflow-auto bg-[#171717] border-cyan-500">
       <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
       <CarouselMovie movies={movies} isMyList={isMyList} />
     </div>

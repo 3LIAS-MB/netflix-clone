@@ -1,4 +1,6 @@
 "use client";
+// Con 'dynamic', puedes desactivar la renderización en el servidor
+// (ssr: false) para asegurarte de que se carguen solo en el cliente.
 import dynamic from "next/dynamic";
 
 import { ActionsButtonsFilm } from "@/components/Shared/ActionsButtonsFilm";

@@ -56,7 +56,7 @@ export function Profiles(props: ProfilesProps) {
         {users.map((user) => (
           <div
             key={user.id}
-            className="text-center relative cursor-pointer"
+            className="relative text-center cursor-pointer"
             onClick={() => onClickUser(user)}
           >
             <Image
@@ -69,7 +69,7 @@ export function Profiles(props: ProfilesProps) {
                 "border-transparent hover:border-2 hover:border-white rounded-md"
               )}
             />
-            <p className="mt-2 text-gray-500 uppercase text-lg">
+            <p className="mt-2 text-lg text-gray-500 uppercase">
               {user.profileName}
             </p>
 
@@ -81,7 +81,7 @@ export function Profiles(props: ProfilesProps) {
             >
               <AlertDialog>
                 <AlertDialogTrigger asChild>
-                  <div className="bg-white rounded-full hover:bg-red-100 p-1">
+                  <div className="p-1 bg-white rounded-full hover:bg-red-100">
                     <Trash2 className="w-6 h-6 text-red-500" />
                   </div>
                 </AlertDialogTrigger>
@@ -94,7 +94,7 @@ export function Profiles(props: ProfilesProps) {
                   <AlertDialogFooter>
                     <AlertDialogCancel>Volver</AlertDialogCancel>
                     <AlertDialogAction
-                      className="text-red-500 border-red-500 border"
+                      className="text-red-500 border border-red-500"
                       onClick={() => deleteUser(user.id)}
                     >
                       Eliminar
@@ -109,7 +109,7 @@ export function Profiles(props: ProfilesProps) {
         <AddProfile />
       </div>
 
-      <div className="mt-16 flex items-center justify-center">
+      <div className="flex items-center justify-center mt-16">
         <Button
           variant="outline"
           size="lg"
@@ -122,3 +122,5 @@ export function Profiles(props: ProfilesProps) {
     </div>
   );
 }
+
+// revisado

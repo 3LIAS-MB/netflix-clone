@@ -20,14 +20,14 @@ export function CarouselMovie(props: CarouselMovieProps) {
 
   return (
     <Carousel className="w-full">
-      <CarouselContent className="-ml-1 gap-2 overflow-inherit ">
+      <CarouselContent className="gap-2 -ml-1 overflow-inherit ">
         {movies.map((movie) => (
           <CarouselItem
             key={movie.id}
-            className="pl-1 md:basis-1/2 lg:basis-1/5 transition delay-300 group relative hover:bg-transparent"
+            className="relative pl-1 transition delay-300 md:basis-1/2 lg:basis-1/5 group hover:bg-transparent"
           >
-            <Card className="cursor-pointer transition delay-300 group relative">
-              <CardContent className="flex aspect-video items-center justify-center p-6 relative border-none rounded-md bg-zinc-900">
+            <Card className="relative transition delay-300 cursor-pointer group">
+              <CardContent className="relative flex items-center justify-center p-6 border-none rounded-md aspect-video bg-zinc-900">
                 <Image
                   src={movie.thumbnailUrl}
                   alt="Image"
@@ -40,14 +40,14 @@ export function CarouselMovie(props: CarouselMovieProps) {
                   duration-300 z-10 invisible sm:visible delay-300
                     w-full bg-zinc-900 rounded-lg scale-0 
                     group-hover:lg:scale-125 group-hover:md:scale-150
-                    group-hover:-translate-y-[5vw] group-hover:opacity-100                "
+                    group-hover:-translate-y-[5vw] group-hover:opacity-100"
                 >
                   <Image
                     src={movie.thumbnailUrl}
                     alt="Movie"
                     width={200}
                     height={200}
-                    className="cursor-pointer object-cover transition-all duration-300 shadow-xl w-full rounded-t-lg"
+                    className="object-cover w-full transition-all duration-300 rounded-t-lg shadow-xl cursor-pointer"
                   />
                   <div className="p-2 shadow-lg">
                     <ActionsButtons

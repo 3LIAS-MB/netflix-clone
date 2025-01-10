@@ -35,6 +35,7 @@ export default async function Home() {
       <Navbar users={usersNetflix} />
       <SliderVideo />
       <TrendingMovies movies={trendingMovies} />
+      
       <ListMovies movies={movies} />
     </div>
   );

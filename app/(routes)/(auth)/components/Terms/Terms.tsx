@@ -8,7 +8,7 @@ export function Terms() {
   const [showExtraTerms, setShowExtraTerms] = useState(false);
 
   return (
-    <div className="text-xs mt-4 mb-10 text-gray-600 max-w-72">
+    <div className="mt-4 mb-10 text-xs text-gray-600 max-w-72">
       <div className="mb-5">
         <span>
           Esta página utiliza Google reCAPTCHA para verificar que no eres un

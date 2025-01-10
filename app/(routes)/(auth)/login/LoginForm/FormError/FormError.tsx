@@ -7,9 +7,11 @@ export function FormError(props: FormErrorProps) {
   if (!message) return null;
 
   return (
-    <div className="bg-destructive/50 p-3 rounded-md flex items-center gap-x-2 text-sm text-white">
+    <div className="flex items-center p-3 text-sm text-white rounded-md bg-destructive/50 gap-x-2">
       <TriangleAlert />
       <p>{message}</p>
     </div>
   );
 }
+
+// revisado

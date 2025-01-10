@@ -13,9 +13,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { formSchema } from "./LoginForm.form";
-import { useState } from "react";
+
 import { FormError } from "./FormError";
+import { formSchema } from "./LoginForm.form";
+
+import { useState } from "react";
 import { login } from "@/actions/login";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
@@ -26,12 +28,20 @@ export function LoginForm() {
   const [error, setError] = useState<string | undefined>("");
 
   const form = useForm<z.infer<typeof formSchema>>({
+    // 'zodResolver' permite que React Hook Form utilice Zod como validador para los datos del 
+    // formulario. Recibe un esquema de Zod que define las reglas de validación de los datos
+    // transforma ese esquema en una función de validación que React Hook Form puede
+    // usar en su resolver para validar los valores del formulario.
     resolver: zodResolver(formSchema),
+    // Especifica los valores predeterminados para los campos del
+    // formulario. Se utiliza para inicializar los valores de los inputs
     defaultValues: {
       email: "",
       password: "",
     },
   });
+
+  console.log(form)
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {  
     try {
@@ -90,7 +100,7 @@ export function LoginForm() {
         />
 
         <FormError message={error} />
-
+        
         <Button type="submit" className="w-full bg-[#E50914]">
           Iniciar sesión
         </Button>
@@ -98,3 +108,5 @@ export function LoginForm() {
     </Form>
   );
 }
+
+// revisado

@@ -26,7 +26,7 @@ export function AddProfile() {
           >
             <PlusCircle className="w-16 h-16 text-gray-500" />
           </div>
-          <p className="mt-2 text-gray-500 uppercase text-lg">Añadir perfil</p>
+          <p className="mt-2 text-lg text-gray-500 uppercase">Añadir perfil</p>
         </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-black">
@@ -36,8 +36,12 @@ export function AddProfile() {
             Añade los diferentes perfiles a tu app
           </DialogDescription>
         </DialogHeader>
+
         <FormAddProfile setOpen={setOpen} />
+        
       </DialogContent>
     </Dialog>
   );
 }
+
+// revisado

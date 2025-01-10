@@ -5,7 +5,11 @@ import { signInSchema } from "@/lib/zod";
 import { AuthError } from "next-auth";
 import { z } from "zod";
 
+// "z.infer" es una utilidad de Zod que se utiliza para
+// inferir el tipo TypeScript de un esquema definido con Zod
 export const login = async (values: z.infer<typeof signInSchema>) => {
+  //`safeParse` devuelve un objeto "{ success: true }"
+  // que indica si la validación fue exitosa o no
   const validatedFields = signInSchema.safeParse(values);
 
   if (!validatedFields.success) {
@@ -15,6 +19,8 @@ export const login = async (values: z.infer<typeof signInSchema>) => {
   const { email, password } = validatedFields.data;
 
   try {
+    // El método "credentials" se utiliza para indicar que se está autenticando con
+    // email y contraseña. Es el método de autenticación predeterminado.
     await signIn("credentials", {
       email,
       password,
@@ -28,7 +34,7 @@ export const login = async (values: z.infer<typeof signInSchema>) => {
           return { error: "Invalid credentials!" };
 
         default:
-          return { error: "Something went wrong!" };
+          return { error: "Something went wr  ong!" };
       }
     }
   }

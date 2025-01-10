@@ -17,17 +17,17 @@ export default async function LoginPage() {
         </Link>
       </div>
 
-      <div className="flex items-center space-x-2 mt-4">
+      <div className="flex items-center mt-4 space-x-2">
         <Checkbox id="terms" className="border-white" />
         <label className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
           Recuérdame
         </label>
       </div>
 
-      <div className="mt-4 flex gap-1">
+      <div className="flex gap-1 mt-4">
         <p className="text-white opacity-70">¿Todavía sin Netflix?</p>
-        <Link href="/register" className="opacity-1 text-white">
-          Suscríbete ya
+        <Link href="/register" className="text-white opacity-1">
+          Registrate aquí
         </Link>
       </div>
 
@@ -35,3 +35,5 @@ export default async function LoginPage() {
     </div>
   );
 }
+
+// revisado

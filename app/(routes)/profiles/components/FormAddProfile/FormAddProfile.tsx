@@ -93,12 +93,12 @@ export function FormAddProfile(props: FormAddProfileProps) {
                   {dataProfilesImages.map((data) => (
                     <FormItem
                       key={data.urlImage}
-                      className="flex flex-col-reverse justify-center items-center space-x-5 space-y-0 cursor-pointer"
+                      className="flex flex-col-reverse items-center justify-center space-x-5 space-y-0 cursor-pointer"
                     >
-                      <FormControl className="text-white ml-3 mt-1">
+                      <FormControl className="mt-1 ml-3 text-white">
                         <RadioGroupItem value={data.urlImage} />
                       </FormControl>
-                      <FormLabel className="font-normal flex justify-center w-full">
+                      <FormLabel className="flex justify-center w-full font-normal">
                         <Image
                           src={data.urlImage}
                           alt="Profile"
@@ -126,3 +126,5 @@ export function FormAddProfile(props: FormAddProfileProps) {
     </Form>
   );
 }
+
+// revisado
